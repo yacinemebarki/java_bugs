@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Bug Checker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+</head>
+<body>
+    <div class="error-message"></div>
+    <div class="success-message"></div>
+    <div class="container">
+        <div class="header">
+            <h1>🔍 Java Bug Checker</h1>
+            <p>Paste your Java code below and let us help you find potential issues!</p>
+        </div>
+        
+        <div class="main-content">
+            <div class="editor-section">
+                <div class="editor-header">
+                    <h2>Your Java Code</h2>
+                    <div>
+                        <button class="check-btn" onclick="checkForBugs()">🔍 Check for Bugs</button>
+                    </div>
+                </div>
+                <textarea 
+                    class="code-editor" 
+                    id="codeEditor" 
+                    placeholder="public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println(&quot;Hello, World!&quot;);
+    }
+}"
+                ></textarea>
+            </div>
+            
+            <div class="results-section">
+                <div class="results-header">
+                    <h2>Analysis Results</h2>
+                    <span class="bug-count" id="bugCount">0 Issues Found</span>
+                </div>
+                
+                <div id="resultsContent">
+                    <div class="no-bugs">
+                        <div class="icon">📝</div>
+                        <h3>Ready to analyze!</h3>
+                        <p>Enter your Java code and click "Check for Bugs" to get started.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='index.js') }}"></script>
+</body>
+</html>
