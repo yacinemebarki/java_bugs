@@ -24,7 +24,7 @@ def check():
     if (info['valid']==False):
         if info['error_line'] is not None:
             results.append(info['error_line'])
-            return jsonify( {'msg':"you have missed [] or {} or () or you have false type",'valid':False,'line_number':results if results else None} )
+            return jsonify( {'msg':"you have missed [] or {} or () or = or you have false type",'valid':False,'line_number':results if results else None} )
         
 
     results=[]
@@ -48,4 +48,5 @@ def check():
 
 
 if __name__ == "__main__":
+
     app.run(debug=True)
