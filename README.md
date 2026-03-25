@@ -39,10 +39,11 @@ This project introduces an **AI-powered web application** that automatically det
 
 ### 🔹 User Interaction Flow
 
-1. **Code Input**: Developer pastes a Java source code file.  
-2. **Data Submission**: Code is sent to the Flask backend via HTTP requests.  
-3. **Bug Detection**: The backend ML model analyzes each line of code and classifies it as *buggy* or *clean*, and a function checks whether operators like `==` and brackets are balanced.
-4. **Results Display**: The app highlights buggy lines and provides instant feedback in the browser.
+1. **Code Input**: Developer pastes a Java source code file.
+2. **Model Selection** : The user selects either Local ML model (TF-IDF-based classifier) or External AI API (Hugging Face / custom provider)
+3. **Data Submission**: Code is sent to the Flask backend via HTTP requests.  
+4. **Bug Detection**: The backend ML model analyzes each line of code and classifies it as *buggy* or *clean*, and a function checks whether operators like `==` and brackets are balanced.
+5. **Results Display**: The app highlights buggy lines and provides instant feedback in the browser.
 
 ### 🔹 Data Preprocessing
 
@@ -58,7 +59,7 @@ This project introduces an **AI-powered web application** that automatically det
 
 ### 🔹 Two-Step Prediction Pipeline
 
-1. **Language Classification (Optional)**  
+1. **Language Classification**  
    - Built a **TF-IDF + Logistic Regression** model on a dataset of 22 programming languages (Kaggle dataset).  
    - Accuracy: **0.96** → Ensures the system first validates if the code is **Java**.
 2. **Bug Detection**  
