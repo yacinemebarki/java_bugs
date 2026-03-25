@@ -245,5 +245,41 @@ body {
     color: #16a34a;
     border: 2px solid #86efac;
 }
+.api-section {
+    padding: 20px 30px;
+    background: #ffffff;
+    border-bottom: 1px solid #e1e8ed;
+}
+
+.api-section h2 {
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+.api-row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.api-row label {
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #34495e;
+}
+
+.api-row input,
+.api-row select {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+.api-row input:focus,
+.api-row select:focus {
+    outline: none;
+    border-color: #3498db;
+}
 
 
